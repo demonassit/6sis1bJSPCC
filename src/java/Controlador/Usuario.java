@@ -23,6 +23,9 @@ public class Usuario {
     
     public Usuario(){}
     
+    //crud de usuarios
+    
+    
     //metodo de verificacion de usuario para el ingreso al sistema
     
     public Usuario verificarUsuario(String user, String clave){
