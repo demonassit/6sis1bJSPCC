@@ -71,6 +71,7 @@ public class Venta {
             
             con = Conexion.getConnection();
             String q = "insert into Venta(venta_Fecha, usuario_Codigo, venta_TotalPagar) values (?, ?, ?)";
+            //String q = "call insertaVenta(?, ?, ?)";
             ps = con.prepareStatement(q);
             ps.setString(1, v.getVenta_Fecha());
             ps.setInt(2, v.getUsuario_Codigo());
@@ -113,6 +114,7 @@ public class Venta {
             //primero debo de obtener toda la lista del detalle que se va a vender
             for(DetalleVenta dv : ldv){
                 String q = "insert into DetalleVenta values (?, ?, ?, ?, ?)";
+                //String q = "call insertaDetalle(?, ?, ?, ?, ?)"
                 ps = con.prepareStatement(q);
                 ps.setInt(1, codigo);
                 ps.setInt(2, dv.getDetventa_Item());
